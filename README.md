@@ -158,7 +158,7 @@ DELETE FROM Employee WHERE employee_id = 1;
 ```sql
 SELECT * FROM Room WHERE type = 1;  -- Standard rooms
 ```
-![table](https://github.com/IlyaKotomin/CurseworkHotelSql/blob/main6.1.png?raw=true)
+![table](https://github.com/IlyaKotomin/CurseworkHotelSql/blob/main/6.1.png?raw=true)
 
 #### 6.2 **Search Room by Date/Period (Availability Check)**
 
@@ -171,7 +171,7 @@ FROM Room r
 WHERE b.booking_id IS NULL;
 ```
 
-![table](https://github.com/IlyaKotomin/CurseworkHotelSql/blob/main6.2.png?raw=true)
+![table](https://github.com/IlyaKotomin/CurseworkHotelSql/blob/main/6.2.png?raw=true)
 
 #### 6.3 **Search Client by Phone**
 
@@ -179,7 +179,7 @@ WHERE b.booking_id IS NULL;
 SELECT * FROM Client WHERE telephone = '111-222-3333';
 ```
 
-![table](https://github.com/IlyaKotomin/CurseworkHotelSql/blob/main6.3.png?raw=true)
+![table](https://github.com/IlyaKotomin/CurseworkHotelSql/blob/main/6.3.png?raw=true)
 
 ----------
 
@@ -196,7 +196,7 @@ WHERE c.client_id = 1
 GROUP BY c.client_id, c.name;
 ```
 
-![table](https://github.com/IlyaKotomin/CurseworkHotelSql/blob/main7.1.png?raw=true)
+![table](https://github.com/IlyaKotomin/CurseworkHotelSql/blob/main/7.1.png?raw=true)
 
 #### 7.2 **Last 5 Customer Reservations**
 
@@ -208,7 +208,7 @@ WHERE b.client_id = 1
 ORDER BY b.booking_date DESC;
 ```
 
-![table](https://github.com/IlyaKotomin/CurseworkHotelSql/blob/main7.2.png?raw=true)
+![table](https://github.com/IlyaKotomin/CurseworkHotelSql/blob/main/7.2.png?raw=true)
 
 #### 7.3 **Available Rooms for Type/Date/Period**
 
@@ -223,7 +223,7 @@ AND NOT EXISTS (
 );
 ```
 
-![table](https://github.com/IlyaKotomin/CurseworkHotelSql/blob/main7.3.png?raw=true)
+![table](https://github.com/IlyaKotomin/CurseworkHotelSql/blob/main/7.3.png?raw=true)
 
 #### 7.4 **Reservations Count by Employee in a Given Period**
 
@@ -235,6 +235,6 @@ WHERE b.start_date BETWEEN '2025-01-01' AND '2025-01-31'
 GROUP BY e.employee_id, e.name;
 ```
 
-![table](https://github.com/IlyaKotomin/CurseworkHotelSql/blob/main7.4.png?raw=true)
+![table](https://github.com/IlyaKotomin/CurseworkHotelSql/blob/main/7.4.png?raw=true)
 
 ----------
