@@ -223,15 +223,6 @@ FROM Employee e
 JOIN Booking b ON e.employee_id = b.employee_id
 WHERE b.start_date BETWEEN '2025-01-01' AND '2025-01-31'
 GROUP BY e.employee_id, e.name;
-
 ```
-
-----------
-
-### 8. **Final Steps and Timeline**
-
--   **Week 6**: Develop Data Model in Oracle Data Modeler.
--   **Week 9**: Implement SQL commands for table creation, data insertion.
--   **Week 12**: Test and analyze the queries, implement reports, and ensure the functionality for data handling.
 
 ----------
