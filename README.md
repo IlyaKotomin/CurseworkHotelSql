@@ -34,7 +34,8 @@ The database can be visualized using the Entity-Relationship Diagram, created wi
 3.  **Room**: Records room details with unique room IDs and other specifications.
 4.  **Booking**: Links clients, employees, and rooms, recording the booking period.
 
-![diagram](https://github.com/IlyaKotomin/CurseworkHotelSql/blob/mainblob/main/3.png?raw=true)
+![diagram](https://github.com/IlyaKotomin/CurseworkHotelSql/blob/main/3.png?raw=true)
+
 ----------
 
 ### 4. **SQL Commands**
