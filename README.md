@@ -1,6 +1,3 @@
-
-----------
-
 ### Project: Database Foundations - Hotel Management System
 
 #### 1. **Assignment**
@@ -37,6 +34,7 @@ The database can be visualized using the Entity-Relationship Diagram, created wi
 3.  **Room**: Records room details with unique room IDs and other specifications.
 4.  **Booking**: Links clients, employees, and rooms, recording the booking period.
 
+![diagram](https://github.com/IlyaKotomin/CurseworkHotelSql/3.png?raw=true)
 ----------
 
 ### 4. **SQL Commands**
@@ -159,6 +157,7 @@ DELETE FROM Employee WHERE employee_id = 1;
 ```sql
 SELECT * FROM Room WHERE type = 1;  -- Standard rooms
 ```
+![table](https://github.com/IlyaKotomin/CurseworkHotelSql/6.1.png?raw=true)
 
 #### 6.2 **Search Room by Date/Period (Availability Check)**
 
@@ -169,13 +168,17 @@ FROM Room r
          LEFT JOIN Booking b ON r.room_id = b.room_id
     AND @check_date BETWEEN b.start_date AND b.end_date
 WHERE b.booking_id IS NULL;
-``` 
+```
+
+![table](https://github.com/IlyaKotomin/CurseworkHotelSql/6.2.png?raw=true)
 
 #### 6.3 **Search Client by Phone**
 
 ```sql
 SELECT * FROM Client WHERE telephone = '111-222-3333';
 ```
+
+![table](https://github.com/IlyaKotomin/CurseworkHotelSql/6.3.png?raw=true)
 
 ----------
 
@@ -192,6 +195,8 @@ WHERE c.client_id = 1
 GROUP BY c.client_id, c.name;
 ```
 
+![table](https://github.com/IlyaKotomin/CurseworkHotelSql/7.1.png?raw=true)
+
 #### 7.2 **Last 5 Customer Reservations**
 
 ```sql
@@ -201,6 +206,8 @@ JOIN Room r ON b.room_id = r.room_id
 WHERE b.client_id = 1
 ORDER BY b.booking_date DESC;
 ```
+
+![table](https://github.com/IlyaKotomin/CurseworkHotelSql/7.2.png?raw=true)
 
 #### 7.3 **Available Rooms for Type/Date/Period**
 
@@ -215,6 +222,8 @@ AND NOT EXISTS (
 );
 ```
 
+![table](https://github.com/IlyaKotomin/CurseworkHotelSql/7.3.png?raw=true)
+
 #### 7.4 **Reservations Count by Employee in a Given Period**
 
 ```sql
@@ -224,5 +233,7 @@ JOIN Booking b ON e.employee_id = b.employee_id
 WHERE b.start_date BETWEEN '2025-01-01' AND '2025-01-31'
 GROUP BY e.employee_id, e.name;
 ```
+
+![table](https://github.com/IlyaKotomin/CurseworkHotelSql/7.4.png?raw=true)
 
 ----------
